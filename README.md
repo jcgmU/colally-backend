@@ -3,6 +3,7 @@
 Este repositorio contiene el **servidor backend** de ColAlly. Implementa la API GraphQL, autenticación, lógica de negocio y servicios en tiempo real.
 
 ## 🛠️ Tecnologías principales
+
 - **TypeScript** + **Node.js**
 - **Express.js** + **Apollo Server** (GraphQL)
 - **Prisma** (PostgreSQL/MySQL)
@@ -26,12 +27,13 @@ La API GraphQL estará disponible en `http://localhost:4000/graphql`.
 
 ## 🧪 Scripts importantes
 
-| Script               | Descripción                          |
-|----------------------|--------------------------------------|
-| `npm run dev`        | Arranca servidor con hot‑reload      |
-| `npm run test`       | Ejecuta pruebas unitarias/integración|
-| `npm run lint`       | ESLint + Prettier                    |
-| `npm run prisma:mig` | Ejecuta migraciones de Prisma        |
+| Script               | Descripción                           |
+| -------------------- | ------------------------------------- |
+| `npm run dev`        | Arranca servidor con hot‑reload       |
+| `npm run test`       | Ejecuta pruebas unitarias/integración |
+| `npm run lint`       | ESLint + Prettier                     |
+| `npm run build`      | Compila el proyecto                   |
+| `npm run prisma:mig` | Ejecuta migraciones de Prisma         |
 
 ## 🔑 Convención de commits (Conventional Commits)
 
@@ -44,10 +46,11 @@ La API GraphQL estará disponible en `http://localhost:4000/graphql`.
 - **docs**, **style**, **refactor**, **test**, **chore**
 
 ## 📝 Branch naming
-- `feature/<nombre>`  – nuevas features
-- `bugfix/<nombre>`   – fixes
-- `hotfix/<nombre>`   – fix urgente
-- `chore/<nombre>`    – mantenimiento
+
+- `feature/<nombre>` – nuevas features
+- `bugfix/<nombre>` – fixes
+- `hotfix/<nombre>` – fix urgente
+- `chore/<nombre>` – mantenimiento
 
 ---
 
