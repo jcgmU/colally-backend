@@ -1,4 +1,5 @@
 # ColAlly – Backend (API & Services)
+[![CI](https://github.com/jcgmU/colally-backend/actions/workflows/ci.yml/badge.svg)](https://github.com/jcgmU/colally-backend/actions/workflows/ci.yml)
 
 Este repositorio contiene el **servidor backend** de ColAlly. Implementa la API GraphQL, autenticación, lógica de negocio y servicios en tiempo real.
 
@@ -32,6 +33,7 @@ La API GraphQL estará disponible en `http://localhost:4000/graphql`.
 | `npm run dev`        | Arranca servidor con hot‑reload       |
 | `npm run test`       | Ejecuta pruebas unitarias/integración |
 | `npm run lint`       | ESLint + Prettier                     |
+| `npm run typecheck`  | Verifica tipos sin emitir código      |
 | `npm run build`      | Compila el proyecto                   |
 | `npm run prisma:mig` | Ejecuta migraciones de Prisma         |
 

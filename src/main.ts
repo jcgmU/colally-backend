@@ -1,11 +1,12 @@
 import 'reflect-metadata';
-import express from 'express';
-import { expressMiddleware } from '@apollo/server/express4';
 import { ApolloServer } from '@apollo/server';
-import { typeDefs } from './presentation/graphql/schema';
-import { resolvers } from './presentation/graphql/resolvers';
-import cors from 'cors';
+import { expressMiddleware } from '@apollo/server/express4';
 import bodyParser from 'body-parser';
+import cors from 'cors';
+import express from 'express';
+
+import { resolvers } from './presentation/graphql/resolvers';
+import { typeDefs } from './presentation/graphql/schema';
 
 export async function createApp() {
   const server = new ApolloServer({ typeDefs, resolvers });
@@ -22,12 +23,10 @@ if (process.env.NODE_ENV !== 'test') {
     .then((app) => {
       const PORT = process.env.PORT || 4000;
       app.listen(PORT, () => {
-        // eslint-disable-next-line no-console
         console.log(`Server ready at http://localhost:${PORT}/graphql`);
       });
     })
     .catch((err) => {
-      // eslint-disable-next-line no-console
       console.error(err);
     });
 }
