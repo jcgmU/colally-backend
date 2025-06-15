@@ -1,5 +1,6 @@
 import 'reflect-metadata';
 import request from 'supertest';
+
 import { createApp } from './main';
 
 describe('GraphQL API', () => {

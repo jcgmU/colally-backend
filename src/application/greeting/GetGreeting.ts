@@ -1,4 +1,5 @@
 import { injectable } from 'tsyringe';
+
 import type { Greeting } from '../../domain/greeting/Greeting';
 
 @injectable()
