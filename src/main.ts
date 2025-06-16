@@ -3,12 +3,16 @@ import { ApolloServer } from '@apollo/server';
 import { expressMiddleware } from '@apollo/server/express4';
 import bodyParser from 'body-parser';
 import cors from 'cors';
+import dotenv from 'dotenv';
 import express from 'express';
 
+import { setupContainer } from './infrastructure/container';
 import { resolvers } from './presentation/graphql/resolvers';
 import { typeDefs } from './presentation/graphql/schema';
+dotenv.config();
 
 export async function createApp() {
+  setupContainer();
   const server = new ApolloServer({ typeDefs, resolvers });
   await server.start();
   const app = express();

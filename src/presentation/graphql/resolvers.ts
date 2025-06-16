@@ -1,12 +1,9 @@
-import { container } from 'tsyringe';
+import { createGreetingLoader } from '../../infrastructure/dataloaders/greetingLoader';
 
-import { GetGreeting } from '../../application/greeting/GetGreeting';
+const greetingLoader = createGreetingLoader();
 
 export const resolvers = {
   Query: {
-    greeting: () => {
-      const useCase = container.resolve(GetGreeting);
-      return useCase.execute();
-    },
+    greeting: () => greetingLoader.load(1),
   },
 };
