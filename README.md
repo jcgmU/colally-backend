@@ -24,6 +24,13 @@ docker compose up -d   # levanta Postgres, Mongo, Redis, MailHog
 npm run dev
 ```
 
+Crea un archivo `.env` a partir de `.env.example` antes de iniciar el servidor.
+Si modificas el esquema GraphQL puedes regenerar los tipos con:
+
+```bash
+npm run generate
+```
+
 La API GraphQL estará disponible en `http://localhost:4000/graphql`.
 
 ## 🧪 Scripts importantes
